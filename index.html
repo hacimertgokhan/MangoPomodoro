@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" id="background">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- importing stylesheets. -->
+    <link rel="stylesheet/less" type="text/css" href="assets/style.css" />
+    <!-- importing less and fontawsome icons. -->
+    <script src="https://cdn.jsdelivr.net/npm/less@4.1.1"></script> 
+    <script src="https://kit.fontawesome.com/55460c171b.js" crossorigin="anonymous"></script>
+    
+    <title>MangooO !</title>
+</head>
+<body>
+    <div class="theme">
+        <ul>
+            <li><button><i class="fa-solid fa-play fa-xl"></i></button></li>
+            <li><button><i class="fa-solid fa-stop fa-xl"></i></button></li>
+            <li>
+                <button>
+                    <section id="rotate-animation">
+                        <i class="fa-solid fa-rotate fa-xl"></i>
+                    </section>
+                </button>
+            </li>
+            <li><button><i class="fa-solid fa-headphones fa-xl"></i></button></li>
+            <li><button id="settings-button"><i class="fa-solid fa-gear fa-xl"></i></button></li>
+        </ul>
+    </div>
+    <span class="settings">
+        <ul>
+            <li>
+                <label for="themes">Themes: </label>
+                <select name="themes" id="themes">
+                    <option value="dark">Dark</option>
+                    <option value="sky">Sky</option>
+                    <option value="sea">Sea</option>
+                    <option value="pink">Pink</option>
+                    <option value="spotify">Spotify</option>
+                </select>
+            </li>
+            <li>
+                <label for="background">Use Image: </label>
+                <input type="checkbox" name="background" id="backgroundimages">
+            </li>
+        </ul>
+        <section id="other-settings">
+            <ul>
+                <li>
+                    <label for="images">Images: </label>
+                    <select name="images" id="images">
+                        <option value="newyork">New york</option>
+                        <option value="tokyo">Tokyo</option>
+                    </select>
+                </li>
+            </ul>
+        </section>
+
+
+
+    </span>
+    <script src="assets/js/settings.js"></script>
+</body>
+</html>

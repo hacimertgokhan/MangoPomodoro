@@ -1,0 +1,127 @@
+$font-family: "Microsoft Yi Baiti";
+
+:root {
+    --primary: #272829;
+    --second: #61677A;
+    --font: #FFF6E0;
+    --other: #D8D9DA;
+}
+
+$theme: (
+    'primary_color': var(--primary),
+    'second_color': var(--second),
+    'font_color': var(--font),
+    'other': var(--other),
+);
+
+:export {
+    @each $key, $value in $theme {
+      #{unquote($key)}: $value;
+    }
+  }
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: var(--primary);
+}
+
+
+.theme {
+    width: fit-content;
+    height: fit-content;
+    padding: 40px 120px;
+    margin: 100px auto;
+    justify-content: center;
+    cursor: pointer;
+    transition: .3s;
+    border-radius: 150px;;
+    background-color: var(--second);
+    ul {
+        list-style-type: none;
+        justify-content: space-evenly;
+        display: flex;
+        margin: auto;
+        li {
+            margin-left: 30px;
+            margin-right: 30px;
+            button {
+                border-radius: 50px;
+                width: fit-content;
+                cursor: pointer;
+                color: var(--second);
+                height: fit-content;
+                transition: .3s;
+                padding: 20px;
+                border: none;
+                outline: none;
+                background-color: var(--other);
+            }
+            button:hover {
+                color: var(--primary);
+                transition: .3s;
+                transform: scale(1.08);
+            }
+
+            #rotate-animation i:hover {
+                transition: .5s;
+                transform: rotate(360deg);
+            }
+        }
+
+    }
+  }
+
+.theme:hover {
+    opacity: 1;
+    transition: .3s;
+}
+
+.settings {
+    width: fit-content;
+    height: fit-content;
+    padding: 40px 120px;
+    display: grid;
+    margin: auto;
+    justify-content: center;
+    cursor: pointer;
+    transform: translate(0%, 0%);
+    transition: .3s;
+    border-radius: 150px;;
+    background-color: var(--second);
+    #other-settings {
+        margin-top: 40px;
+        display: block;
+    }
+    ul {
+        list-style-type: none;
+        justify-content: space-evenly;
+        display: flex;
+        li {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        label {
+            font-family: $font-family;
+            margin: auto;
+            display: inline-flex;
+            font-size: 25px;
+            color: var(--other);
+        }
+        select {
+            border-radius: 50px;
+            display: inline-flex;
+            margin: auto;
+        }
+    }
+
+}
+
+
+.toggle-mode {
+    transform: translate(0%, 5%);
+}
