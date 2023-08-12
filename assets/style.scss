@@ -1,8 +1,9 @@
 $font-family: "Microsoft Yi Baiti";
 
 :root {
-    --primary: #272829;
-    --second: #61677A;
+    --primary: #202020;
+    --second: #303030;
+    --settings: #57c2e6;
     --font: #FFF6E0;
     --other: #D8D9DA;
 }
@@ -31,6 +32,22 @@ html {
     overflow: hidden;
 }
 
+.dev {
+    position: absolute;
+    font-family: $font-family;
+    color: var(--other);
+    font-size: 20px;
+    margin: 5px 5px auto;
+    a {
+        transition: .2s;
+        color: var(--other);
+        text-decoration: none;
+    }
+    a:hover {
+        letter-spacing: 1px;
+        transition: .2s;
+    }
+}
 
 .theme {
     width: fit-content;
@@ -42,7 +59,8 @@ html {
     transition: .3s;
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
-    background-color: var(--second);
+    background-color: var(--other);
+
     ul {
         list-style-type: none;
         justify-content: space-evenly;
@@ -55,16 +73,17 @@ html {
                 border-radius: 50px;
                 width: fit-content;
                 cursor: pointer;
-                color: var(--second);
+                color: var(--other);
                 height: fit-content;
                 transition: .3s;
                 padding: 15px;
                 border: none;
                 outline: none;
-                background-color: var(--other);
+                background-color: var(--primary);
             }
             button:hover {
-                color: var(--primary);
+                color: var(--other);
+                background-color: var(--second);
                 transition: .3s;
                 transform: scale(1.08);
             }
@@ -83,27 +102,19 @@ html {
     transition: .3s;
 }
 
-.music {
-    width: fit-content;
-    height: fit-content;
-    margin: auto;
-    transform: translateY(350%);
-    position: relative;
-    transition: .3s;
-}
-
 .settings {
     width: fit-content;
     height: fit-content;
     padding: 40px 120px;
     display: grid;
     margin: auto;
+    position: relative;
     justify-content: center;
     cursor: pointer;
     transform: translate(0%, -500%);
     transition: .3s;
     border-radius: 150px;;
-    background-color: var(--second);
+    background-color: var(--other);
     #other-settings {
         margin-top: 40px;
         display: none;
@@ -121,7 +132,7 @@ html {
             margin: auto;
             display: inline-flex;
             font-size: 25px;
-            color: var(--other);
+            color: var(--primary);
         }
         select {
             border-radius: 50px;
@@ -145,6 +156,7 @@ html {
 
 
 .toggle-mode {
+    transition: .3s;
     transform: translate(0%, 5%);
 }
 
@@ -153,11 +165,18 @@ html {
     font-family: $font-family;
     font-size: 75px;
     height: auto;
-    justify-content: center;
     margin: 100px auto;
-    color: var(--font);
-    text-align: center;
-    background-color: #61677A;
+    color: var(--other);
+    background-color: var(--primary);
     padding: 20px;
     border-radius: 150px;
+}
+
+@media (max-width:800px) {
+    .dev {
+        display: none;
+    }
+    .theme {
+        border-radius: 0px;
+    }
 }

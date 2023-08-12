@@ -10,18 +10,18 @@
     <script src="https://cdn.jsdelivr.net/npm/less@4.1.1"></script> 
     <script src="https://kit.fontawesome.com/55460c171b.js" crossorigin="anonymous"></script>
     
+    <link rel="icon" href="/assets/images/icon.png">
     <title>MangooO !</title>
 </head>
 <body>
+    <span class="dev">v00.04, <a href="https://github.com/hacimertgokhan/MangooO">Source code</a></span>
     <div class="theme">
         <ul>
             <li><button id="start"><i class="fa-solid fa-play fa-xl"></i></button></li>
-            <li><button id="pause"><i class="fa-solid fa-stop fa-xl"></i></button></li>
+            <li><button id="stop"><i class="fa-solid fa-stop fa-xl"></i></button></li>
             <li>
-                <button id="stop">
-                    <section id="rotate-animation">
+                <button id="reset">
                         <i class="fa-solid fa-rotate fa-xl"></i>
-                    </section>
                 </button>
             </li>
             <li><button id="settings-button"><i class="fa-solid fa-gear fa-xl"></i></button></li>
@@ -30,13 +30,10 @@
     <span class="settings">
         <ul>
             <li>
-                <label for="themes">Themes: </label>
-                <select name="themes" id="themes">
+                <label for="colors">Colors: </label>
+                <select name="colors" id="colors">
+                    <option value="def">Default</option>
                     <option value="dark">Dark</option>
-                    <option value="sky">Sky</option>
-                    <option value="sea">Sea</option>
-                    <option value="pink">Pink</option>
-                    <option value="spotify">Spotify</option>
                 </select>
             </li>
             <li>
@@ -56,8 +53,9 @@
             </ul>
         </section>
     </span>
-    <div id="showcase" class="pomodoro"></div>
+    <div id="showcase" class="pomodoro">0:0</div>
     <script src="assets/js/settings.js"></script>
+    <script src="assets/js/theme.js"></script>
     <script src="assets/js/counter.js"></script>
 </body>
 </html>

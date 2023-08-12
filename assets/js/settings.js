@@ -53,7 +53,6 @@ settings.addEventListener("click", () => {
     if(close_settings_menu) {
         close_settings_menu = false;
     } else {
-        document.querySelector('.theme').style.opacity = none;
         close_settings_menu = true;
     }
 });
