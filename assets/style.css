@@ -31,6 +31,7 @@ html {
   margin: 100px auto;
   justify-content: center;
   cursor: pointer;
+  opacity: 0;
   transition: 0.3s;
   border-radius: 150px;
   background-color: var(--second);
@@ -84,7 +85,7 @@ html {
   margin: auto;
   justify-content: center;
   cursor: pointer;
-  transform: translate(0%, 0%);
+  transform: translate(0%, -500%);
   transition: 0.3s;
   border-radius: 150px;
   background-color: var(--second);
@@ -113,6 +114,16 @@ html {
   border-radius: 50px;
   display: inline-flex;
   margin: auto;
+}
+
+.zero-opacity {
+  opacity: 0;
+  transform: 0.3s;
+}
+
+.one-opacity {
+  opacity: 1;
+  transform: 0.3s;
 }
 
 .toggle-mode {

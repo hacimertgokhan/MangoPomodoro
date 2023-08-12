@@ -38,6 +38,7 @@ html {
     margin: 100px auto;
     justify-content: center;
     cursor: pointer;
+    opacity: 0;
     transition: .3s;
     border-radius: 150px;;
     background-color: var(--second);
@@ -89,7 +90,7 @@ html {
     margin: auto;
     justify-content: center;
     cursor: pointer;
-    transform: translate(0%, 0%);
+    transform: translate(0%, -500%);
     transition: .3s;
     border-radius: 150px;;
     background-color: var(--second);
@@ -120,6 +121,17 @@ html {
     }
 
 }
+
+.zero-opacity {
+    opacity: 0;
+    transform: .3s;
+}
+
+.one-opacity {
+    opacity: 1;
+    transform: .3s;
+}
+
 
 
 .toggle-mode {

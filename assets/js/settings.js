@@ -8,6 +8,7 @@ let images = document.getElementById("other-settings");
 let checkbox_value = true;
 let imageControl = document.getElementById("images");
 let primary_color = "#272829";
+let close_settings_menu = false;
 
 
 updateSettings();
@@ -57,8 +58,15 @@ checkbox_bimages.addEventListener("click", () => {
 
 settings.addEventListener("click", () => {
     slide();
+    if(close_settings_menu) {
+        close_settings_menu = false;
+    } else {
+        document.querySelector('.theme').style.opacity = 1;
+        close_settings_menu = true;
+    }
 });
 
 function slide(){
+    document.querySelector('.settings').style.opacity = 1;
     document.querySelector('.settings').classList.toggle("toggle-mode");
 }
