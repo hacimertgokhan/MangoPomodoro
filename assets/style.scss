@@ -28,19 +28,20 @@ $theme: (
 
 html {
     background-color: var(--primary);
+    overflow: hidden;
 }
 
 
 .theme {
     width: fit-content;
     height: fit-content;
-    padding: 40px 120px;
-    margin: 100px auto;
+    padding: 10px 20px 10px 20px;
+    margin: auto;
     justify-content: center;
     cursor: pointer;
-    opacity: 0;
     transition: .3s;
-    border-radius: 150px;;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
     background-color: var(--second);
     ul {
         list-style-type: none;
@@ -57,7 +58,7 @@ html {
                 color: var(--second);
                 height: fit-content;
                 transition: .3s;
-                padding: 20px;
+                padding: 15px;
                 border: none;
                 outline: none;
                 background-color: var(--other);
@@ -82,6 +83,15 @@ html {
     transition: .3s;
 }
 
+.music {
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+    transform: translateY(350%);
+    position: relative;
+    transition: .3s;
+}
+
 .settings {
     width: fit-content;
     height: fit-content;
@@ -96,7 +106,7 @@ html {
     background-color: var(--second);
     #other-settings {
         margin-top: 40px;
-        display: block;
+        display: none;
     }
     ul {
         list-style-type: none;
@@ -136,4 +146,18 @@ html {
 
 .toggle-mode {
     transform: translate(0%, 5%);
+}
+
+.pomodoro {
+    width: fit-content;
+    font-family: $font-family;
+    font-size: 75px;
+    height: auto;
+    justify-content: center;
+    margin: 100px auto;
+    color: var(--font);
+    text-align: center;
+    background-color: #61677A;
+    padding: 20px;
+    border-radius: 150px;
 }

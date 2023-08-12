@@ -15,16 +15,15 @@
 <body>
     <div class="theme">
         <ul>
-            <li><button><i class="fa-solid fa-play fa-xl"></i></button></li>
-            <li><button><i class="fa-solid fa-stop fa-xl"></i></button></li>
+            <li><button id="start"><i class="fa-solid fa-play fa-xl"></i></button></li>
+            <li><button id="pause"><i class="fa-solid fa-stop fa-xl"></i></button></li>
             <li>
-                <button>
+                <button id="stop">
                     <section id="rotate-animation">
                         <i class="fa-solid fa-rotate fa-xl"></i>
                     </section>
                 </button>
             </li>
-            <li><button><i class="fa-solid fa-headphones fa-xl"></i></button></li>
             <li><button id="settings-button"><i class="fa-solid fa-gear fa-xl"></i></button></li>
         </ul>
     </div>
@@ -56,10 +55,9 @@
                 </li>
             </ul>
         </section>
-
-
-
     </span>
+    <div id="showcase" class="pomodoro"></div>
     <script src="assets/js/settings.js"></script>
+    <script src="assets/js/counter.js"></script>
 </body>
 </html>
