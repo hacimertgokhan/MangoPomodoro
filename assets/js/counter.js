@@ -1,3 +1,5 @@
+console.info("[MangooO] counter.js loaded...");
+
 let showcase = document.getElementById('showcase');
 let start = document.getElementById('start');
 let stop = document.getElementById('stop');
@@ -6,7 +8,6 @@ let minute = 0;
 let seconds = 0;
 let TimerShowCase;
 let isCounterEnable = false;
-
 start.addEventListener("click", () => {
     isCounterEnable = true;
 })
@@ -19,7 +20,7 @@ reset.addEventListener("click", () => {
     isCounterEnable = false;
     minute = 0;
     seconds = 0;
-    TimerShowCase = minute + ":" + seconds;
+    TimerShowCase = "0"+minute + ":" + "0"+seconds;
     showcase.innerText = TimerShowCase;
 })
 
@@ -29,11 +30,22 @@ setInterval(() => {
         if(seconds >= 60) {
             seconds = 0;
             minute++;
-            TimerShowCase = minute + ":" + seconds;
-            showcase.innerText = TimerShowCase;
-        } else {
-            TimerShowCase = minute + ":" + seconds;
-            showcase.innerText = TimerShowCase;
         }
+        if(seconds >= 10) {
+            if(minute >= 10) {
+                TimerShowCase = minute + ":" + seconds;
+            } else {
+                TimerShowCase = "0"+minute + ":" +seconds;
+            }
+        } else {
+            TimerShowCase =minute + ":" +"0"+seconds;
+            if(minute >= 10) {
+                TimerShowCase =minute + ":" +"0"+seconds;
+            } else {
+                TimerShowCase ="0"+minute + ":" +"0"+seconds;
+            }
+        }
+        showcase.innerText = TimerShowCase;
+
     }
 }, 1000)

@@ -7,9 +7,14 @@ let settings = document.getElementById("settings-button");
 let checkbox_bimages = document.getElementById("backgroundimages");
 let images = document.getElementById("other-settings");
 let checkbox_value = true;
+let useImage;
 let imageControl = document.getElementById("images");
-let primary_color = "#272829";
+let primary_color = "#303030";
 let close_settings_menu = false;
+
+
+function getUseImage(){return useImage;}
+export{getUseImage};
 
 imageControl.addEventListener("click", () => {
     let imageType = document.getElementById("images").value;
@@ -38,10 +43,12 @@ checkbox_bimages.addEventListener("click", () => {
     backgroundImage();
     console.log(primary_color)
     if(!checkbox_value) {
+        useImage = false;
         images.style.display = "none";
         checkbox_value=true;
         background.style.background=primary_color;
     } else {
+        useImage = true;
         images.style.display = "block";
         checkbox_value=false;
     }

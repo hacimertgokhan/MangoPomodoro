@@ -20,7 +20,7 @@
 }
 
 html {
-  background-color: var(--primary);
+  background-color: var(--second);
   overflow: hidden;
 }
 
@@ -102,11 +102,15 @@ html {
   height: fit-content;
   padding: 40px 120px;
   display: grid;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
   margin: auto;
-  position: relative;
   justify-content: center;
   cursor: pointer;
-  transform: translate(0%, -500%);
+  transform: translate(0%, 500%);
   transition: 0.3s;
   border-radius: 150px;
   background-color: var(--other);
@@ -149,7 +153,7 @@ html {
 
 .toggle-mode {
   transition: 0.3s;
-  transform: translate(0%, 5%);
+  transform: translate(0%, 120%);
 }
 
 .pomodoro {
@@ -172,4 +176,14 @@ html {
   .theme {
     border-radius: 0px;
   }
+}
+.console {
+  width: 100%;
+  font-family: "Microsoft Yi Baiti";
+  text-align: left;
+  height: auto;
+  position: absolute;
+  bottom: 0;
+  font-size: 25px;
+  color: #FFF6E0;
 }/*# sourceMappingURL=style.css.map */
