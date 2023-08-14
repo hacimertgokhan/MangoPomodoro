@@ -17,6 +17,7 @@
 
 ```` 
 
+[00.06] Fixed settings translate bugs
 [00.05] Changed counter style & fixed style.scss bugs, Using images with colors
 [00.04] Changed counter.js & fixed counter bugs
 [00.03] Added counter.js & changed style.scss
