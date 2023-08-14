@@ -1,5 +1,4 @@
 console.info("[MangooO] counter.js loaded...");
-
 let showcase = document.getElementById('showcase');
 let start = document.getElementById('start');
 let stop = document.getElementById('stop');
